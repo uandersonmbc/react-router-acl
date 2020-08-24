@@ -1,7 +1,5 @@
 import React from 'react';
 
-const RouterAcl: React.FC = () => {
-  return <div />;
-};
+const RouterAcl: React.FC = () => <div />;
 
 export default RouterAcl;

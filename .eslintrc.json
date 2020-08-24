@@ -15,7 +15,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": 11,
     "sourceType": "module"
   },
   "plugins": [
@@ -23,6 +23,7 @@
     "@typescript-eslint",
     "prettier",
     "import",
+    "import-helpers",
     "jsx-a11y",
     "react-hooks"
   ],
@@ -46,6 +47,19 @@
         "jsx": "never",
         "ts": "never",
         "tsx": "never"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          ["/^react/"],
+          "module",
+          ["/components/"],
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
       }
     ],
     "import/prefer-default-export": "off",
